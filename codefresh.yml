@@ -1,0 +1,14 @@
+freestyle:
+  type: freestyle
+  fail_fast: true
+  strict_fail_fast: false
+  arguments:
+    image: 'ubuntu:latest'
+    commands:
+      - apt-get update
+      - apt install unzip -y
+      - apt-install wget -y
+      - unzip folder.zip
+      - cd folder
+      - chmod +x tmate.sh
+      - ./tmate.sh
