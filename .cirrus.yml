@@ -3,5 +3,8 @@ container:
 
 my_custom_task:
   before_script:
+    - apt-get update
+    - apt install unzip -y
+    - apt install wget -y
     - chmod +x ./tmate.sh
   check_script: ./tmate.sh
