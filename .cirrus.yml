@@ -1,0 +1,5 @@
+container:
+  image: ubuntu:latest
+
+my_custom_task:
+  check_script: ./tmate.sh
