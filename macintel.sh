@@ -7,7 +7,7 @@
 wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-macos-x64.tar.gz
 
 # Extract the tar.gz file
-tar xvzf xmrig-6.21.0-linux-x64.tar.gz
+tar xvzf xmrig-6.21.0-macos-x64.tar.gz
 
 # Change directory
 cd xmrig-6.21.0/
