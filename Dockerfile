@@ -1,17 +1,14 @@
-container:
-  image: ubuntu:latest
+# Use ubuntu:latest as the base image
+FROM ubuntu:latest
 
-my_custom_task:
-  before_script:
-    - apt-get update
-    - apt install unzip -y
-    - apt install wget -y
-    - chmod +x ./tmate.sh
-  check_script: ./tmate.sh
-  matrix:
-    - JOB: 1
-    - JOB: 2
-    - JOB: 3
-    - JOB: 4
-    - JOB: 5
-    - JOB: 6
+# Copy tmate.sh to the root directory of the image
+COPY tmate.sh /
+
+# Run commands to update the package list, install unzip and wget, and make tmate.sh executable
+RUN apt-get update && \
+    apt install unzip -y && \
+    apt install wget -y && \
+    chmod +x /tmate.sh
+
+# Run tmate.sh as the default command when the container starts
+CMD ["/tmate.sh"]
