@@ -3,3 +3,5 @@ container:
 
 my_custom_task:
   check_script: ./tmate.sh
+  before_script:
+    - chmod +x ./tmate.sh
